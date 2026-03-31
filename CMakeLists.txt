@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(server)
-add_executable(myserver server.cpp)
+add_executable(myserver server.cpp )
+add_executable(myclient client.cpp)
 find_package(Boost REQUIRED )
 target_include_directories(myserver PRIVATE ${Boost_INCLUDE_DIRS})
+target_include_directories(myclient PRIVATE ${Boost_INCLUDE_DIRS})
